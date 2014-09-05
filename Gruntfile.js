@@ -1,174 +1,160 @@
 'use strict';
-var path = require('path');
-//var lrSnippet = require('grunt-contrib-livereload/lib/utils').livereloadSnippet;
-
-var folderMount = function folderMount(connect, point) {
-  return connect.static(path.resolve(point));
-};
 
 module.exports = function(grunt) {
-  var theme_name = 'app';
 
-  var global_vars = {
-    theme_name: theme_name,
-    theme_css: 'css',
-    theme_scss: 'sass'
-  }
+    require('load-grunt-tasks')(grunt);
 
-  grunt.initConfig({
-    global_vars: global_vars,
-    pkg: grunt.file.readJSON('package.json'),
 
-    compass: {
-      dist: {
-        options: {
-          config: 'config.rb'
-        },
-        files: {
-          '<%= global_vars.theme_css %>/<%= global_vars.theme_name %>.css': '<%= global_vars.theme_scss %>/<%= global_vars.theme_name %>.<%= global_vars.theme_scss %>'
-        }
-      }
-    },
-    watch: {
-      grunt: { files: ['Gruntfile.js'] },
+	grunt.initConfig({
+		pkg: grunt.file.readJSON('package.json'),
+		app: 'app',
+		dist: 'dist',
 
-      sass: {
-        files: '<%= global_vars.theme_scss %>/**/*.<%= global_vars.theme_scss %>',
-        tasks: ['compass:dist', 'stripmq', 'replace:ieRem', 'replace:ieRemMain','copy:ie'],
-        options: {
-          livereload: true
-        }
-      },
-      js: {
-        files: [
-          'js/{,**/}*.js',
-          '!js/{,**/}*.min.js'
-        ],
-        tasks: [
-          'jshint',
-        ]
-      },
-      images: {
-        files: 'images/src/{,**/}*.png',
-        tasks: ['imagemin']
-      },
-    },
-    jshint: {
-      options: {
-        jshintrc: '.jshintrc'
-      },
-      all: [
-        'js/{,**/}*.js',
-        '!js/{,**/}*.min.js',
-        '!js/foundation/{,**/}*.js',
-        '!js/vendor/{,**/}*.js'
-      ]
-    },
-    stripmq: {
-      options: {
-        stripBase: true,
-        minWidth: 40,
-        maxWidth: 1280
-      },
-      files: {
-        src: [
-          'css/custom-foundation.css',
-          'css/custom.css',
-        ],
-        dest: 'css/ie-mq.css'
-      },
-    },
-    replace: {
-      ieRem: {
-        src: [
-          'css/ie-mq.css'
-        ],
-        overwrite: true,
-        replacements: [{
-          from: /(\d*\.?\d+)rem/ig,
-          to: function(matchedWord, index, fullText, regexMatches) {
-            var val = regexMatches.pop();
-            return parseFloat(val) * 14 + "px";
-          }
-        }]
-      },
-      ieRemMain: {
-        src: [
-          'css/custom*.css'
-        ],
-        dest: 'css/ie/',
-        replacements: [{
-          from: /(\d*\.?\d+)rem/ig,
-          to: function(matchedWord, index, fullText, regexMatches) {
-            var val = regexMatches.pop();
-            return parseFloat(val) * 14 + "px";
-          }
-        }]
-      }
-    },
-    copy: {
-      ie: {
-        expand: true,
-        cwd: 'css/ie',
-        src: [
-          'custom*.css', '!*-ie.css'
-        ],
-        dest: 'css/ie/',
-        ext: '-ie.css'
-      }
-    },
-    buildIcons: {
-       options: {
-        processors: [
-          {
-            pattern: /asdas/gi,
-            handler: function(context, matchParams) {
-                return 'img="static/path/to/image.png"';
-            }
-          }
-        ]
-      },
-      files: [
-        {
-          src: 'css/fontawesome-icons.css',
-          dest: 'documentation/dist/icons/icons-fontawesome.html'
-        }
-      ]
-    },
-    imagemin: {
-      options: {                       // Target options
-        optimizationLevel: 3
-      },
-      dynamic: {                         // Another target
-        files: [{
-          expand: true,                  // Enable dynamic expansion
-          cwd: 'images/src/',                   // Src matches are relative to this path
-          src: ['**/*.png'],             // Actual patterns to match
-          dest: 'images/'                  // Destination path prefix
-        }]
-      }
-    },
-    copyIcons: {
-      files: [
-        {
-          src: 'css/fontawesome-icons.css',
-          dest: 'documentation/dist/icons/css/'
-        }
-      ]
-    }
-  });
+		sass: {
+			options: {
+				includePaths: ['<%= app %>/bower_components/foundation/scss']
+			},
+			dist: {
+				options: {
+					outputStyle: 'extended'
+				},
+				files: {
+					'<%= app %>/css/app.css': '<%= app %>/s*ss/app.s*ss'
+				}
+			}
+		},
 
-  //grunt.loadNpmTasks('grunt-sass');
-  grunt.loadNpmTasks('grunt-contrib-compass');
-  grunt.loadNpmTasks('grunt-contrib-watch');
-  grunt.loadNpmTasks('grunt-contrib-copy');
-  grunt.loadNpmTasks('grunt-text-replace');
-  grunt.loadNpmTasks('grunt-stripmq');
-  grunt.loadNpmTasks('grunt-contrib-jshint');
-  grunt.loadNpmTasks('grunt-newer');
-  grunt.loadNpmTasks('grunt-contrib-imagemin');
+		
 
-  grunt.registerTask('build', ['compass'/*, 'imagemin'*/,'stripmq', 'replace:ieRem', 'replace:ieRemMain', 'copy:ie']);
-  grunt.registerTask('icons', ['compass', 'buildIcons', 'copyIcons']);
-  grunt.registerTask('default', ['watch','compass','jshint']);
-}
+		jshint: {
+			options: {
+				jshintrc: '.jshintrc'
+			},
+			all: [
+				'Gruntfile.js',
+				'<%= app %>/js/**/*.js'
+			]
+		},
+
+		clean: {
+			dist: {
+				src: ['<%= dist %>/*']
+			},
+		},
+		copy: {
+			dist: {
+				files: [{
+					expand: true,
+					cwd:'<%= app %>/',
+					src: ['fonts/**', '**/*.html', '!**/*.s*ss', '!bower_components/**'],
+					dest: '<%= dist %>/'
+				} , {
+					expand: true,
+					flatten: true,
+					src: ['<%= app %>/bower_components/font-awesome/fonts/**'],
+					dest: '<%= dist %>/fonts/',
+					filter: 'isFile'
+				} ]
+			},
+		},
+
+		imagemin: {
+			target: {
+				files: [{
+					expand: true,
+					cwd: '<%= app %>/images/',
+					src: ['**/*.{jpg,gif,svg,jpeg,png}'],
+					dest: '<%= dist %>/images/'
+				}]
+			}
+		},
+
+		uglify: {
+			options: {
+				preserveComments: 'some',
+				mangle: false
+			}
+		},
+
+		useminPrepare: {
+			html: ['<%= app %>/index.html'],
+			options: {
+				dest: '<%= dist %>'
+			}
+		},
+
+		usemin: {
+			html: ['<%= dist %>/**/*.html', '!<%= app %>/bower_components/**'],
+			css: ['<%= dist %>/css/**/*.css'],
+			options: {
+				dirs: ['<%= dist %>']
+			}
+		},
+
+		watch: {
+			grunt: {
+				files: ['Gruntfile.js'],
+				tasks: ['sass']
+			},
+			sass: {
+				files: '<%= app %>/s*ss/**/*.s*ss',
+				tasks: ['sass']
+			},
+			livereload: {
+				files: ['<%= app %>/**/*.html', '!<%= app %>/bower_components/**', '<%= app %>/js/**/*.js', '<%= app %>/css/**/*.css', '<%= app %>/images/**/*.{jpg,gif,svg,jpeg,png}'],
+				options: {
+					livereload: true
+				}
+			}
+		},
+
+		connect: {
+			app: {
+				options: {
+					port: 9000,
+					base: '<%= app %>/',
+					open: true,
+					livereload: true,
+					hostname: '127.0.0.1'
+				}
+			},
+			dist: {
+				options: {
+					port: 9001,
+					base: '<%= dist %>/',
+					open: true,
+					keepalive: true,
+					livereload: false,
+					hostname: '127.0.0.1'
+				}
+			}
+		},
+
+		wiredep: {
+			target: {
+				src: [
+					'<%= app %>/**/*.html'
+				],
+				exclude: [
+					'modernizr',
+					'font-awesome',
+					'jquery-placeholder',
+					'jquery.cookie',
+					'foundation'
+				]
+			}
+		}
+
+	});
+
+	
+	grunt.registerTask('compile-sass', ['sass']);
+	grunt.registerTask('bower-install', ['wiredep']);
+	
+	grunt.registerTask('default', ['compile-sass', 'bower-install', 'connect:app', 'watch']);
+	grunt.registerTask('validate-js', ['jshint']);
+	grunt.registerTask('server-dist', ['connect:dist']);
+	
+	grunt.registerTask('publish', ['compile-sass', 'clean:dist', 'validate-js', 'useminPrepare', 'copy:dist', 'newer:imagemin', 'concat', 'cssmin', 'uglify', 'usemin']);
+
+};
