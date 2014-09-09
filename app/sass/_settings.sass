@@ -5,26 +5,16 @@ $blue-gray: #3b475a
 $gray-light: #f4f4f4
 $white: #ffffff
 $gray-text: #333333
-$alternate-gothic: "alternate-gothic-no-3-d"
-$franklin: "franklin-gothic-urw"
-$pad-1: 1.25rem
-$pad-2: 2.5rem
-$pad-3: 3.75rem
+$nimbus: "nimbus-sans-condensed"
+$morepro: "ff-more-web-pro"
+$pad-1: .8rem
+$pad-2: 1.6rem
+$pad-3: 3.2rem
 $pad-4: 5.0rem
 $panel-line-height: 1
 $primary-color: #008cba
 
 
-// We use these to style paragraphs
-$paragraph-font-family: $franklin
-// $paragraph-font-weight: $font-weight-normal;
-$paragraph-font-size: 1.3rem
-$paragraph-line-height: 1.6
-// $paragraph-margin-bottom: rem-calc(20);
-// $paragraph-aside-font-size: rem-calc(14);
-// $paragraph-aside-line-height: 1.35;
-// $paragraph-aside-font-style: italic;
-// $paragraph-text-rendering: optimizeLegibility;
 
 // We use these to control button text styles.
 // $button-font-family: $body-font-family;
@@ -58,8 +48,13 @@ $topbar-bg-color: $blue-gray
 // FOUNDATION SETTINGS
 //
 
+// Since the typical default browser font-size is 16px, that makes the calculation for grid size.
+// If you want your base font-size to be different and not have it affect the grid breakpoints,
+// set $rem-base to $base-font-size and make sure $base-font-size is a px value.
+$base-font-size: 18px 
+
 // This is the default html and body font-size for the base rem value.
-// $rem-base: 16px;
+$rem-base: $base-font-size
 
 // Allows the use of rem-calc() or lower-bound() in your settings
 @import foundation/functions
@@ -67,10 +62,7 @@ $topbar-bg-color: $blue-gray
 // The default font-size is set to 100% of the browser style sheet (usually 16px)
 // for compatibility with browser-based text zoom or user-set defaults.
 
-// Since the typical default browser font-size is 16px, that makes the calculation for grid size.
-// If you want your base font-size to be different and not have it affect the grid breakpoints,
-// set $rem-base to $base-font-size and make sure $base-font-size is a px value.
-// $base-font-size: 100%;
+
 
 // The $base-font-size is 100% while $base-line-height is 150%
 // $base-line-height: 150%;
@@ -130,7 +122,7 @@ $body-font-weight: $font-weight-normal
 // $shiny-edge-color: rgba(#fff, .5);
 // $shiny-edge-active-color: rgba(#000, .2);
 
-// $column-gutter: rem-calc(30);
+$column-gutter: 1.6rem
 
 // Media Query Ranges
 // $small-range: (0em, 40em);
@@ -188,11 +180,11 @@ $body-font-weight: $font-weight-normal
 // $header-text-rendering: optimizeLegibility;
 
 // We use these to control header font sizes
-// $h1-font-size: rem-calc(44);
-// $h2-font-size: rem-calc(37);
-// $h3-font-size: rem-calc(27);
-// $h4-font-size: rem-calc(23);
-// $h5-font-size: rem-calc(18);
+$h1-font-size: rem-calc(72)
+$h2-font-size: rem-calc(36)
+$h3-font-size: rem-calc(36)
+$h4-font-size: rem-calc(24)
+$h5-font-size: rem-calc(18)
 // $h6-font-size: 1rem;
 
 // We use these to control header size reduction on small screens
@@ -215,15 +207,15 @@ $body-font-weight: $font-weight-normal
 // $small-font-color: scale-color($header-font-color, $lightness: 35%);
 
 // We use these to style paragraphs
-// $paragraph-font-family: inherit;
+$paragraph-font-family: $morepro
 // $paragraph-font-weight: $font-weight-normal;
-$paragraph-font-size: 1.2rem
+$paragraph-font-size: 1rem
 $paragraph-line-height: 1.6
-// $paragraph-margin-bottom: rem-calc(20);
+$paragraph-margin-bottom: 1rem
 // $paragraph-aside-font-size: rem-calc(14);
 // $paragraph-aside-line-height: 1.35;
 // $paragraph-aside-font-style: italic;
-// $paragraph-text-rendering: optimizeLegibility;
+// $paragraph-text-rendering: optimizeLegibility; 
 
 // We use these to style <code> tags
 // $code-color: #333;
