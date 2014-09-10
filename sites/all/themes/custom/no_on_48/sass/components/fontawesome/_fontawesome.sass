@@ -1,0 +1,154 @@
+$fa-font-path: "../fonts/fontawesome"
+$fontName: "FontAwesome"
+
+//$fa-font-path:        "//netdna.bootstrapcdn.com/font-awesome/4.0.3/fonts" !default // for referencing Bootstrap CDN font files directly
+$fa-css-prefix: "fa"
+$fa-version: "4.2.0"
+$fa-border-color: #eee
+$fa-inverse: #fff
+$fa-li-width: (30em / 14)
+
+//***********************************
+//
+// Icon Helpers for NON foundation icons mixins
+//
+// There are a number of ways to include icon fonts in your css / sass.
+//
+// The most common is to inject
+//
+// class="icon-name"
+//
+// into html structure, and load a separate icon font stylesheet. This is
+// probably the easiest for the majority of cases.
+//
+// Another would be to set up some tools to place icons with css only.
+//
+// These are some tools to assist the second scenario.
+//
+// 1) Set up the icon variables in _variables.
+// 2) Fill in some real values in the example section below.
+// 3) Call icons-init in your style sheet
+// 4) Insert an icon using +icon(twitter)
+//
+//***********************************
+
+// EXAMPLE ICONS
+// Replace with actual values provided by your downloaded icon font package.
+// The format of the naming scheme should be:
+//
+// %icon-ICON-NAME
+//   content: "\code"
+
+// The extendable definition
+%icons-core
+  display: inline-block
+  font-family: FontAwesome
+  font-style: normal
+  font-weight: normal
+  line-height: 1
+  -webkit-font-smoothing: antialiased
+  -moz-osx-font-smoothing: grayscale
+
+// Simple icon mixin
+// $icon: the name without the "icon-" preface
+// $size: (optional) font-size the icon should be
+// $color: (optional) color of the icon
+// $hover: (optional) color of the icon on hover
+=icon($icon, $size: inherit, $color: false, $hover: false)
+  @if $hover != false
+    &:hover
+      &:before
+        color: $hover
+  @extend %fa-#{$icon}
+  &:before
+    font-size: $size
+    @if $color != false
+      color: $color
+    @extend %icons-core
+    
+=nice-icon($icon, $size: inherit, $color: false, $hover: false)
+  +icon($icon, $size, $color, $hover)
+  &:before
+    margin-right: 0.5em
+    text-align: center
+    width: 1em
+
+// Mixin replaces an element with the icon
+// $icon: the name without the "icon-" preface
+// $width: width the element should be
+// $height: (optional) height the element should be
+// $size: (optional) font-size the icon should be
+// $color: (optional) color of the icon
+// $hover: (optional) color of the icon on hover
+=icon-replace($icon, $width, $height: false, $size: inherit, $color: false, $hover: false)
+  @if $hover != false
+    &:hover
+      &:before
+        color: $hover
+  display: inline-block
+  text-align: center
+  @extend %fa-#{$icon}
+  &,
+  &:before
+    @if $height != false
+      height: $height
+      line-height: $height
+    overflow: hidden
+    width: $width
+  &:before
+    font-size: $size
+    @if $color != false
+      color: $color
+    @extend %icons-core
+
+@font-face
+  font-family: 'FontAwesome'
+  src: url('#{$fa-font-path}/fontawesome-webfont.eot?v=#{$fa-version}')
+  src: url('#{$fa-font-path}/fontawesome-webfont.eot?#iefix&v=#{$fa-version}') format('embedded-opentype'), url('#{$fa-font-path}/fontawesome-webfont.woff?v=#{$fa-version}') format('woff'), url('#{$fa-font-path}/fontawesome-webfont.ttf?v=#{$fa-version}') format('truetype'), url('#{$fa-font-path}/fontawesome-webfont.svg?v=#{$fa-version}#fontawesomeregular') format('svg')
+  //src: url('#{$fa-font-path/FontAwesome.otf') format('opentype') // used when developing fonts
+  font-weight: normal
+  font-style: normal
+
+/* Font Awesome uses the Unicode Private Use Area (PUA) to ensure screen
+   readers do not read off random characters that represent icons */
+
+i[class^="#{$fa-css-prefix}"]
+  @extend %icons-core
+  
+  margin-right: 0.75em
+
+// fudge the icon styling on a button with appropriate paddding
+@mixin icon-button-replace($icon: $fa-var-chevron-right, $size: 'medium')
+  overflow: hidden
+  width: 2.7em
+  padding-left: 0
+  padding-right: 0
+  text-indent: 2.7em
+
+  @if $size == 'small'
+    font-size: 0.95em
+
+  &:before
+    content: $icon
+    @extend %icons-core
+    font-size: 1.4em
+    position: absolute
+    left: 0
+    width: 1.6em
+    text-align: center
+    top: 0
+    padding-top: 0.25em
+    text-indent: 0
+
+// Variables
+// --------------------------
+
+@import variables
+
+$fa-include-css: true!default
+
+
+// Icons
+// --------------------------
+
+@import icons
