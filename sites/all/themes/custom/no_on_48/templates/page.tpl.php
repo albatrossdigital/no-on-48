@@ -57,7 +57,7 @@
       <?php if ($alt_main_menu): ?>
       <div class="row">
         <div class="large-3 columns">
-        <h1><a href="<?php print $front_page; ?>"><img src="http://placehold.it/400x100&text=Logo"/></a></h1>
+        <h1><a href="<?php print $front_page; ?>"><img src="./sites/all/themes/custom/no_on_48/assets/48logo.png"/></a></h1>
       </div>
         <div class="large-9 columns">
           <nav id="main-menu" class="navigation right button-group" role="navigation">
@@ -80,7 +80,7 @@
 
     <?php if (!empty($page['header'])): ?>
       <!--.l-header-region -->
-      <section class="l-header-region row">
+      <section class="l-header-region row tanbg">
         <div class="medium-12 columns">
           <?php print render($page['header']); ?>
         </div>
