@@ -6989,7 +6989,13 @@ i[class^="fa"] {
   font-size: 1.5rem;
   text-transform: uppercase;
   letter-spacing: 1px;
-  margin-top: 3.2rem; }
+  margin-top: 6rem; }
+
+.l-header img {
+  padding-bottom: 1.6rem; }
+
+.l-header img {
+  margin-bottom: 1.6rem; }
 
 .breadcrumbs {
   display: none; }
