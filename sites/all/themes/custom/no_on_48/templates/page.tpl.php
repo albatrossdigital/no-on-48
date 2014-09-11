@@ -168,20 +168,30 @@
   </main>
   <!--/.main-->
 
-  <?php if (!empty($page['triptych_first']) || !empty($page['triptych_middle']) || !empty($page['triptych_last'])): ?>
-    <!--.triptych-->
-    <section class="l-triptych row">
-      <div class="triptych-first medium-4 columns">
-        <?php print render($page['triptych_first']); ?>
+  <?php if (!empty($page['diptych_first']) || !empty($page['diptych_middle'])): ?>
+    <!--.diptych-->
+    <section class="l-diptych row">
+      <div class="diptych-first medium-6 columns">
+        <?php print render($page['diptych_first']); ?>
       </div>
-      <div class="triptych-middle medium-4 columns">
-        <?php print render($page['triptych_middle']); ?>
-      </div>
-      <div class="triptych-last medium-4 columns">
-        <?php print render($page['triptych_last']); ?>
+      <div class="diptych-middle medium-6 columns">
+        <?php print render($page['diptych_middle']); ?>
       </div>
     </section>
-    <!--/.triptych -->
+    <!--/.diptych -->
+  <?php endif; ?>
+  
+  <?php if (!empty($page['diptych2_first']) || !empty($page['diptych2_middle'])): ?>
+    <!--.diptych2-->
+    <section class="l-diptych2 row">
+      <div class="diptych2-first medium-8 columns">
+        <?php print render($page['diptych2_first']); ?>
+      </div>
+      <div class="diptych2-middle medium-4 columns">
+        <?php print render($page['diptych2_middle']); ?>
+      </div>
+    </section>
+    <!--/.diptych -->
   <?php endif; ?>
   
   <?php if (!empty($page['footer_firstcolumn']) || !empty($page['footer_secondcolumn']) || !empty($page['footer_thirdcolumn']) || !empty($page['footer_fourthcolumn'])): ?>
