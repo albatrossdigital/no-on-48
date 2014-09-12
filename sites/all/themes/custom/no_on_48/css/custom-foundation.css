@@ -358,7 +358,7 @@ html, body {
 
 body {
   background: #fff;
-  color: #333;
+  color: #222222;
   padding: 0;
   margin: 0;
   font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
@@ -2562,7 +2562,7 @@ form .row input.column, form .row input.columns, form .row textarea.column, form
 /* Label Styles */
 label {
   font-size: 0.875rem;
-  color: #707070;
+  color: #646464;
   cursor: pointer;
   display: block;
   font-weight: normal;
@@ -2577,7 +2577,7 @@ label {
     padding: 0.5625rem 0; }
   label small {
     text-transform: capitalize;
-    color: #868686; }
+    color: #7c7c7c; }
 
 select::-ms-expand {
   display: none; }
@@ -2844,7 +2844,7 @@ span.error, small.error {
   background: #f04124;
   color: #FFFFFF; }
 .error > label > small {
-  color: #868686;
+  color: #7c7c7c;
   background: transparent;
   padding: 0;
   text-transform: capitalize;
@@ -3487,7 +3487,7 @@ ul.pagination {
   border-style: solid;
   border-width: 1px;
   border-color: #d8d8d8;
-  margin-bottom: 1.25rem;
+  margin-bottom: 2.5rem;
   padding: 1.25rem;
   background: #f2f2f2; }
   .panel > :first-child {
@@ -3505,7 +3505,7 @@ ul.pagination {
     border-style: solid;
     border-width: 1px;
     border-color: #f5c1c6;
-    margin-bottom: 1.25rem;
+    margin-bottom: 2.5rem;
     padding: 1.25rem;
     background: #fdf0f1; }
     .panel.callout > :first-child {
@@ -3687,8 +3687,8 @@ ul.pagination {
   bottom: 0;
   left: 0;
   right: 0;
-  background: #333;
-  background: rgba(51, 51, 51, 0.45);
+  background: #222222;
+  background: rgba(34, 34, 34, 0.45);
   z-index: 1004;
   display: none;
   left: 0; }
@@ -3705,7 +3705,7 @@ ul.pagination {
   background-color: #FFFFFF;
   padding: 1.25rem;
   border: solid 1px #666666;
-  box-shadow: 0 0 10px rgba(51, 51, 51, 0.4);
+  box-shadow: 0 0 10px rgba(34, 34, 34, 0.4);
   padding: 1.875rem; }
   @media only screen and (max-width: 40em) {
     .reveal-modal {
@@ -3799,8 +3799,8 @@ dialog {
     bottom: 0;
     left: 0;
     right: 0;
-    background: #333;
-    background: rgba(51, 51, 51, 0.45);
+    background: #222222;
+    background: rgba(34, 34, 34, 0.45);
     z-index: null;
     display: none;
     left: 0; }
@@ -4224,12 +4224,12 @@ a {
 p {
   font-family: "ff-more-web-pro";
   font-weight: normal;
-  font-size: 1rem;
+  font-size: 1.2rem;
   line-height: 1.6;
   margin-bottom: 1.25rem;
   text-rendering: optimizeLegibility; }
   p.lead {
-    font-size: 1.21875rem;
+    font-size: 1.41875rem;
     line-height: 1.6; }
   p aside {
     font-size: 0.875rem;
@@ -4308,7 +4308,7 @@ code {
 
 /* Lists */
 ul, ol, dl {
-  font-size: 1rem;
+  font-size: 1.2rem;
   line-height: 1.6;
   margin-bottom: 1.25rem;
   list-style-position: outside;
@@ -4359,7 +4359,7 @@ dl dd {
 abbr, acronym {
   text-transform: uppercase;
   font-size: 90%;
-  color: #333;
+  color: #222222;
   border-bottom: 1px dotted #DDDDDD;
   cursor: help; }
 
@@ -4437,7 +4437,7 @@ blockquote, blockquote p {
 
   * {
     background: transparent !important;
-    color: #333 !important;
+    color: #222222 !important;
     /* Black prints faster: h5bp.com/s */
     box-shadow: none !important;
     text-shadow: none !important; }
@@ -4560,7 +4560,7 @@ blockquote, blockquote p {
   display: inline-block;
   border: solid 4px #FFFFFF;
   max-width: 100%;
-  box-shadow: 0 0 0 1px rgba(51, 51, 51, 0.2);
+  box-shadow: 0 0 0 1px rgba(34, 34, 34, 0.2);
   transition: all 200ms ease-out; }
   .th:hover, .th:focus {
     box-shadow: 0 0 6px 1px rgba(190, 30, 45, 0.5); }
@@ -5293,7 +5293,7 @@ ul.off-canvas-list {
   -webkit-backface-visibility: hidden;
   transition: background 300ms ease;
   cursor: pointer;
-  box-shadow: -4px 0 4px rgba(51, 51, 51, 0.5), 4px 0 4px rgba(51, 51, 51, 0.5);
+  box-shadow: -4px 0 4px rgba(34, 34, 34, 0.5), 4px 0 4px rgba(34, 34, 34, 0.5);
   display: block;
   position: absolute;
   background: rgba(255, 255, 255, 0.2);
@@ -5318,7 +5318,7 @@ ul.off-canvas-list {
   -webkit-backface-visibility: hidden;
   transition: background 300ms ease;
   cursor: pointer;
-  box-shadow: -4px 0 4px rgba(51, 51, 51, 0.5), 4px 0 4px rgba(51, 51, 51, 0.5);
+  box-shadow: -4px 0 4px rgba(34, 34, 34, 0.5), 4px 0 4px rgba(34, 34, 34, 0.5);
   display: block;
   position: absolute;
   background: rgba(255, 255, 255, 0.2);
@@ -5343,7 +5343,7 @@ ul.off-canvas-list {
   -webkit-backface-visibility: hidden;
   transition: background 300ms ease;
   cursor: pointer;
-  box-shadow: -4px 0 4px rgba(51, 51, 51, 0.5), 4px 0 4px rgba(51, 51, 51, 0.5);
+  box-shadow: -4px 0 4px rgba(34, 34, 34, 0.5), 4px 0 4px rgba(34, 34, 34, 0.5);
   display: block;
   position: absolute;
   background: rgba(255, 255, 255, 0.2);
@@ -5368,7 +5368,7 @@ ul.off-canvas-list {
   -webkit-backface-visibility: hidden;
   transition: background 300ms ease;
   cursor: pointer;
-  box-shadow: -4px 0 4px rgba(51, 51, 51, 0.5), 4px 0 4px rgba(51, 51, 51, 0.5);
+  box-shadow: -4px 0 4px rgba(34, 34, 34, 0.5), 4px 0 4px rgba(34, 34, 34, 0.5);
   display: block;
   position: absolute;
   background: rgba(255, 255, 255, 0.2);
@@ -5393,7 +5393,7 @@ ul.off-canvas-list {
   -webkit-backface-visibility: hidden;
   transition: background 300ms ease;
   cursor: pointer;
-  box-shadow: -4px 0 4px rgba(51, 51, 51, 0.5), 4px 0 4px rgba(51, 51, 51, 0.5);
+  box-shadow: -4px 0 4px rgba(34, 34, 34, 0.5), 4px 0 4px rgba(34, 34, 34, 0.5);
   display: block;
   position: absolute;
   background: rgba(255, 255, 255, 0.2);

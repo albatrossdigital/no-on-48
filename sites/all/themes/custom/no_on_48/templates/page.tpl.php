@@ -93,7 +93,7 @@
 
   <?php if (!empty($page['featured'])): ?>
     <!--/.featured -->
-    <section class="l-featured row">
+    <section class="l-featured">
       <div class="medium-12 columns">
         <?php print render($page['featured']); ?>
       </div>
