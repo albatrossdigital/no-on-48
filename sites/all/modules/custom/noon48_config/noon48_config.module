@@ -1,0 +1,47 @@
+<?php
+
+function noon48_config_block_info() {
+  // This example comes from node.module.
+  $blocks['twitter'] = array(
+    'info' => t('twitter feed custom'),
+    'cache' => DRUPAL_NO_CACHE,
+  );
+
+  $blocks['webformblock'] = array(
+    'info' => t('email form'),
+    // DRUPAL_CACHE_PER_ROLE will be assumed.
+  );
+
+  return $blocks;
+}
+
+function noon48_config_block_view($delta = '') {
+  // This example is adapted from node.module.
+  $block = array();
+
+  switch ($delta) {
+    case 'twitter':
+      //$block['subject'] = t('Syndicate');
+      $block['content'] = array(
+        '#markup' => twitter_pull_render ('@albatrossdigi', $title = FALSE, $num_items = 6, $themekey = NULL),
+      );
+      break;
+
+    case 'webformblock':
+      if (user_access('access content')) {
+        //$block['subject'] = t('Recent content');
+        if ($nodes = node_get_recent(variable_get('node_recent_block_count', 10))) {
+          $block['content'] = array(
+            '#theme' => 'node_recent_block',
+            '#nodes' => $nodes,
+          );
+        }
+        else {
+          $block['content'] = t('No content available.');
+        }
+      }
+      break;
+  }
+  dpm ($block);
+  return $block;
+}
