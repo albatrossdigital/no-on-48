@@ -45,18 +45,36 @@
 // @import "vendor/ie";
 
 
-      
+.logo
+  img
+    margin-left: 1rem
+    margin-top: -1rem
+
 
     
 .breadcrumbs
   display: none
+    
+#main-menu-links
+  margin-top: -1.5rem
+    
+    
+.view-id-issues
+  h2
+    padding-top: 2rem
   
 //footer
 
 .footer-second
   li
     display: inline
-    padding-left: 1.5rem
+    padding-left: 1.5rem 
+    font-family: $nimbus
+    font-weight: 400
+    color: #777777
+    text-transform: uppercase
+    letter-spacing: 1px
+    margin-bottom: $pad-2
       
   a
     font-family: $nimbus
@@ -75,7 +93,9 @@
   p
     font-size: 1.1rem
 
-.footer
+.footer,
+.field-name-editorial-date,
+  padding-top: $pad-2 
   p
     font-family: $nimbus
     font-weight: 400
@@ -84,6 +104,24 @@
     letter-spacing: 1px
     margin-bottom: $pad-2
     
+.field-name-node-link 
+  a
+    font-family: $nimbus
+    font-weight: 400
+    color: $primary-color
+    text-transform: uppercase
+    letter-spacing: 1px
+    margin-bottom: $pad-2
+    
+      
+.field-name-field-quote
+  font-family: "ff-more-web-pro"
+  color: #222222
+  line-height: 1.6em
+  font-weight: 400
+  margin-top: 0.8rem
+  font-size: 1.625rem
+
 p
   margin-bottom: 1.5rem
     
@@ -91,13 +129,48 @@ p
   margin-left: 1rem
   padding-right: 2rem
     
+.view-id-news,
+.page-news
+  img
+    padding-top: $pad-2
+    margin-top: 1rem
+
+@mixin h2-blk
+  font-family: "nimbus-sans-condensed"
+  font-weight: 700
+  text-transform: uppercase
+  letter-spacing: 1px
+  margin-top: 1.3rem  
+  font-size: $h2-font-size
     
+.block-bean-stay-informed
+  background-color: $tan
+  
+  h4
+    +h2-blk
+
+.block-views-news-block-2
+  h2
+    +h2-blk
+  
+
+@mixin h1-standard
+  font-family: $nimbus
+  letter-spacing: 1px
+  padding-top: .5em
+  line-height: 1em
+  font-weight: 900
+  text-transform: uppercase
+  font-size: $h1-font-size
+
+
+
 .node-issues
   p
     font-size: $paragraph-font-size
     font-family: $paragraph-font-family
     font-weight: normal
-    
+   
   h2
     font-family: $paragraph-font-family
     font-size: $h2-font-size
@@ -108,11 +181,47 @@ p
     margin-bottom: $pad-2
     outline-color: $tan
     background-color: $tan
+    margin-left: auto
+    margin-right: auto
     
     
 .l-featured
-  .medium-12
+  .block-views-hp-slider-block
     background-color: $black
+    color: $white
+    
+    
+    h2
+      +h1-standard
+      color: $white
+      margin-bottom: .05rem
+      width: 60%
+        
+    p
+      margin-top: -1rem
+      font-size: rem-calc(24)
+      width: 70%
+    
+  .node
+    padding-bottom: 0
+    padding-top: 0
+    padding-right: 0
+  
+  div.body.field
+    margin-top: -25rem
+    
+  .medium-12
+    padding-right: 0px
+    padding-left: 0px
+    
+  a
+    .orbit-prev
+      margin-right: 1rem
+    
+.page-flight-front
+  main
+    hr
+      display: none
     
     
     
@@ -139,12 +248,10 @@ header
   padding-bottom: $pad-1
 
 .newslogo
-  padding-left: $pad-1
+  padding-left: $pad-2
 
 .inthenews
   padding-left: $pad-1
-
-
   
 ol.orbit-bullets
   display: none
@@ -215,11 +322,17 @@ h3
   margin-top: $pad-2
   margin-bottom: $pad-1
 
-  a
-    color: #be1e2d
+a
+  color: #be1e2d
 
-    &:hover
-      color: red
+  &:hover
+    color: red
+  
+.postfix.button
+     &:hover
+      background-color: red
+  
+    
   
 .fill h3
   margin-top: 0

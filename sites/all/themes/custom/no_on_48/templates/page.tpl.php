@@ -33,8 +33,7 @@
     <?php if ($alt_header): ?>
     <section class="row <?php print $alt_header_classes; ?>">
 
-      <?php if ($linked_logo): print $linked_logo; endif; ?>
-
+    
       <?php if ($site_name): ?>
         <?php if ($title): ?>
           <div id="site-name" class="element-invisible">
@@ -56,10 +55,10 @@
 
       <?php if ($alt_main_menu): ?>
       <div class="row">
-        <div class="large-3 columns">
-        <h1><a href="<?php print $front_page; ?>"><img src="./sites/all/themes/custom/no_on_48/assets/48logo.png"/></a></h1>
+        <div class="medium-3 columns logo">
+        <h1><a href="<?php print $front_page; ?>"><img src="<?php print $logo; ?>"/></a></h1>
       </div>
-        <div class="large-9 columns">
+        <div class="medium-9 columns">
           <nav id="main-menu" class="navigation right button-group" role="navigation">
             <?php print ($alt_main_menu); ?>
           </nav> <!-- /#main-menu -->
