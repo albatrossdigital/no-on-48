@@ -1,5 +1,8 @@
 <?php
 
+/**
+ * Implements hook_block_info().
+ */
 function noon48_config_block_info() {
   // This example comes from node.module.
   $blocks['twitter'] = array(
@@ -15,6 +18,10 @@ function noon48_config_block_info() {
   return $blocks;
 }
 
+
+/**
+ * Implements hook_block_info().
+ */
 function noon48_config_block_view($delta = '') {
   // This example is adapted from node.module.
   $block = array();
@@ -23,25 +30,46 @@ function noon48_config_block_view($delta = '') {
     case 'twitter':
       //$block['subject'] = t('Syndicate');
       $block['content'] = array(
-        '#markup' => twitter_pull_render ('@albatrossdigi', $title = FALSE, $num_items = 6, $themekey = NULL),
+        '#markup' => twitter_pull_render('@albatrossdigi', $title = FALSE, $num_items = 6, $themekey = NULL),
       );
       break;
 
     case 'webformblock':
       if (user_access('access content')) {
         //$block['subject'] = t('Recent content');
-        if ($nodes = node_get_recent(variable_get('node_recent_block_count', 10))) {
-          $block['content'] = array(
-            '#theme' => 'node_recent_block',
-            '#nodes' => $nodes,
-          );
-        }
-        else {
-          $block['content'] = t('No content available.');
-        }
+        $form = drupal_get_form('noon48_config_email_form');
+        $block['content'] = drupal_render($form);
       }
       break;
   }
-  dpm ($block);
+
   return $block;
+}
+
+
+/**
+ * Custom email entry form.
+ */
+function noon48_config_email_form($form, $form_state) {
+  // Get the canned messages terms
+  $form['#action'] = url('node/12');
+  $form['email'] = array(
+    '#title' => t('Email'),
+    '#type' => 'textfield',
+  );
+  $form['submit'] = array(
+    '#value' => t('Submit'),
+    '#type' => 'submit',
+  );
+  return $form;
+}
+
+
+/**
+ * Custom email entry form.
+ */
+function noon48_config_form_webform_client_form_12_alter(&$form, &$form_state) {
+  if (!empty($_POST['email'])) {
+    $form['submitted']['email']['#default_value'] = $_POST['email'];
+  }
 }
