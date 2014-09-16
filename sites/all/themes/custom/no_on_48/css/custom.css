@@ -7067,7 +7067,7 @@ p {
   margin-left: 1rem;
   padding-right: 2rem; }
 
-.view-id-news img, .page-news img {
+.view-id-news img {
   padding-top: 1.6rem;
   margin-top: 1rem; }
 
@@ -7081,13 +7081,43 @@ p {
     margin-top: 1.3rem;
     font-size: 2.25rem; }
 
-.block-views-news-block-2 h2 {
+.block-views-news-block-2 {
+  margin-top: 4rem; }
+  .block-views-news-block-2 h2 {
+    font-family: "nimbus-sans-condensed";
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-top: 1.3rem;
+    font-size: 2.25rem; }
+  .block-views-news-block-2 img {
+    opacity: 0.6;
+    filter: alpha(opacity=40);
+    margin-top: 0.5rem;
+    padding-top: 0.25rem; }
+
+.block-views-news-block h2 {
   font-family: "nimbus-sans-condensed";
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 1px;
   margin-top: 1.3rem;
   font-size: 2.25rem; }
+
+.page-title {
+  width: 150%; }
+
+.block-bean-endorsers h2 {
+  font-family: "nimbus-sans-condensed";
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-top: 1.3rem;
+  font-size: 2.25rem; }
+.block-bean-endorsers tr {
+  background-color: #FFFFFF; }
+  .block-bean-endorsers tr .even {
+    background-color: #FFFFFF; }
 
 .node-issues p {
   font-size: 1.2rem;
