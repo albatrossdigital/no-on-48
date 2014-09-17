@@ -7199,8 +7199,10 @@ p {
 .diptych2-middle .block-noon48-config {
   background-color: #efece7;
   padding: 0.8rem;
-  margin-top: -1rem;
+  margin-top: -0.05rem;
   padding-bottom: 5rem; }
+.diptych2-middle hr {
+  display: none; }
 
 .tweets-pulled-listing {
   margin-top: 0.3rem; }
@@ -7227,15 +7229,7 @@ p {
   margin-top: 0.5rem; }
 
 .tweet-text {
-  font-size: 1rem; }
-
-#widget {
-  display: none; }
-
-#follow-button a {
-  display: none; }
-#follow-button span label {
-  display: none; }
+  font-size: 0.9rem; }
 
 .block-bean-endorsers {
   background-color: #efece7;
