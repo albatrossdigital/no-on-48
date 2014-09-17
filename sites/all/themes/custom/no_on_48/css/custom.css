@@ -7153,12 +7153,21 @@ div.orbit-timer {
   margin-bottom: 2.3rem;
   line-spacing: 1px; }
 
+.page-flight-front .field-name-editorial-date, .page-news .field-name-editorial-date {
+  padding-top: 1.5rem;
+  margin-bottom: 2.3rem;
+  line-spacing: 1px;
+  margin-top: -1rem; }
+
 p {
   margin-bottom: 1.5rem; }
 
 .group-content {
   margin-left: 1rem;
   padding-right: 2rem; }
+
+.main {
+  margin-bottom: 1.5rem; }
 
 .block-bean-stay-informed {
   background-color: #efece7; }
@@ -7242,9 +7251,6 @@ p {
 .tweet-text {
   font-size: 0.9rem; }
 
-li .tweet-screenname {
-  display: none; }
-
 .block-noon48-config-twitter {
   background-color: #efece7;
   margin-top: 8rem;
@@ -7263,6 +7269,8 @@ li .tweet-screenname {
     list-style-type: none;
     padding-left: 0.75rem;
     padding-right: 0.5rem; }
+    .block-noon48-config-twitter li .tweet-screenname {
+      display: none; }
   .block-noon48-config-twitter .tweet-divider {
     display: none; }
   .block-noon48-config-twitter ul {

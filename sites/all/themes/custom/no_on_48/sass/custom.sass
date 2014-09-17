@@ -250,6 +250,11 @@ div.orbit-timer
 .field-name-editorial-date
   +news-date
 
+.page-flight-front, .page-news
+  .field-name-editorial-date
+    +news-date
+    margin-top: -1.0rem
+
 
 //general
 p
@@ -258,6 +263,9 @@ p
 .group-content
   margin-left: 1rem
   padding-right: 2rem
+
+.main
+  margin-bottom: 1.5rem
     
 
 
@@ -355,10 +363,7 @@ p
     
 //twitter-sidebar
 
-li
-  .tweet-screenname
-    display: none
-      
+  
 .block-noon48-config-twitter
   background-color: $tan
   margin-top: 8rem
@@ -374,6 +379,10 @@ li
     list-style-type: none
     padding-left: 0.75rem
     padding-right: 0.5rem
+      
+    .tweet-screenname
+      display: none
+      
       
   .tweet-divider
     display: none
