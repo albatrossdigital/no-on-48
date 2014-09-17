@@ -44,7 +44,25 @@
 // Older IE support
 // @import "vendor/ie";
 
+@mixin h2-blk
+  font-family: "nimbus-sans-condensed"
+  font-weight: 700
+  text-transform: uppercase
+  letter-spacing: 1px
+  margin-top: 1.3rem  
+  font-size: $h2-font-size
+  
+@mixin h1-standard
+  font-family: $nimbus
+  letter-spacing: 1px
+  padding-top: .5em
+  line-height: 1em
+  font-weight: 900
+  text-transform: uppercase
+  font-size: $h1-font-size
 
+
+//header 
 .logo
   img
     margin-left: 1rem
@@ -57,12 +75,44 @@
     
 #main-menu-links
   margin-top: -1.5rem
+
+//featured   
+.l-featured
+  .block-views-hp-slider-block
+    background-color: $black
+    color: $white
     
     
-.view-id-issues
-  h2
-    padding-top: 2rem
+    h2
+      +h1-standard
+      color: $white
+      margin-bottom: .05rem
+      width: 60%
+        
+    p
+      margin-top: -2.5rem
+      font-size: rem-calc(24)
+      width: 70%
+    
+  .node
+    padding-bottom: 0
+    padding-top: 0
+    padding-right: 0
   
+  div.body.field
+    margin-top: -25rem
+    
+  .medium-12
+    padding-right: 0px
+    padding-left: 0px
+    
+  a
+    .orbit-prev
+      margin-right: 1rem
+
+div.orbit-timer
+  display: none
+      
 //footer
 
 .footer-second
@@ -103,7 +153,56 @@
     text-transform: uppercase
     letter-spacing: 1px
     margin-bottom: $pad-2
+
+//issues  
+.view-id-issues
+  h2
+    padding-top: 2rem
+      
+.node-issues
+  p
+    font-size: $paragraph-font-size
+    font-family: $paragraph-font-family
+    font-weight: normal
+   
+  h2
+    font-family: $paragraph-font-family
+    font-size: $h2-font-size
+    font-weight: 500
     
+    
+.views-row
+  .panel
+    margin-bottom: $pad-2
+    outline-color: $tan
+    background-color: $tan
+    margin-left: auto
+    margin-right: auto
+    
+
+    
+//news    
+@mixin news-date
+  padding-top: 1.5rem
+  margin-bottom: 2.3rem
+  line-spacing: 1px
+  
+
+
+
+      
+.block-views-news-block-2
+  margin-top: 3rem
+  h2
+    +h2-blk
+    
+  img
+    opacity: 0.6
+    filter: alpha(opacity=40)
+    margin-top: 0.5rem
+    padding-top: 0.25rem
+    padding-bottom: 0.75rem
+      
 .field-name-node-link 
   a
     font-family: $nimbus
@@ -120,8 +219,35 @@
   line-height: 1.6em
   font-weight: 400
   margin-top: 0.8rem
+  margin-bottom: 1.8rem
   font-size: 1.625rem
+  padding-right: 0.5rem
 
+.block-views-news-block
+  h2
+    +h2-blk    
+
+.block-views-news-block 
+  padding-top: 1rem
+  
+  .views-field-title
+    margin-bottom: 1.6rem
+
+
+.view-id-news
+  h2
+    font-family: $morepro
+    line-height: 1.2em
+    font-weight: 500
+    margin-top: $pad-2
+    margin-bottom: $pad-1
+    font-size: $h3-font-size
+    
+.field-name-editorial-date
+  +news-date
+
+
+//general
 p
   margin-bottom: 1.5rem
     
@@ -129,101 +255,92 @@ p
   margin-left: 1rem
   padding-right: 2rem
     
-.view-id-news,
-.page-news
-  img
-    padding-top: $pad-2
-    margin-top: 1rem
 
-@mixin h2-blk
-  font-family: "nimbus-sans-condensed"
-  font-weight: 700
-  text-transform: uppercase
-  letter-spacing: 1px
-  margin-top: 1.3rem  
-  font-size: $h2-font-size
-    
+
+
+//stay informed blocks
+
 .block-bean-stay-informed
   background-color: $tan
   
   h4
     +h2-blk
+    
+    
+//share
 
-.block-views-news-block-2
+#share42
+  background-color: transparent
+  
+  &:hover
+    background: transparent
+    border: 0px solid transparent
+    box-shadow: 0 0 0 transparent
+      
+  a
+    img
+      display: none
+  
+.fill
   h2
     +h2-blk
   
-
-@mixin h1-standard
-  font-family: $nimbus
-  letter-spacing: 1px
-  padding-top: .5em
-  line-height: 1em
-  font-weight: 900
-  text-transform: uppercase
-  font-size: $h1-font-size
-
-
-
-.node-issues
-  p
-    font-size: $paragraph-font-size
-    font-family: $paragraph-font-family
-    font-weight: normal
-   
-  h2
-    font-family: $paragraph-font-family
-    font-size: $h2-font-size
-    font-weight: 500
-    
-.views-row
-  .panel
-    margin-bottom: $pad-2
-    outline-color: $tan
-    background-color: $tan
-    margin-left: auto
-    margin-right: auto
-    
-    
-.l-featured
-  .block-views-hp-slider-block
-    background-color: $black
-    color: $white
-    
-    
-    h2
-      +h1-standard
-      color: $white
-      margin-bottom: .05rem
-      width: 60%
-        
-    p
-      margin-top: -1rem
-      font-size: rem-calc(24)
-      width: 70%
-    
-  .node
-    padding-bottom: 0
-    padding-top: 0
-    padding-right: 0
+.share42-item
+  display: none
   
-  div.body.field
-    margin-top: -25rem
+
+
+
+//endorsers block
+
+  
+  
+.block-bean-endorsers
+  background-color: $tan
+  padding: $pad-2
+  margin-top: $pad-2
+  margin-bottom: $pad-2
+  
+  table
+    border: none
     
-  .medium-12
-    padding-right: 0px
-    padding-left: 0px
+    body
+      border-top: none
+  h2
+    +h2-blk
     
-  a
-    .orbit-prev
-      margin-right: 1rem
+  tr
+    background-color: transparent
     
+    .even
+      background-color: transparent
+    
+    &:nth-of-type(even)
+      background-color: transparent
+  
+  span
+    font-family: "ff-more-web-pro"
+    font-weight: normal
+    font-size: 1.2rem
+    text-rendering: optimizeLegibility
+    line-height: 1.6
+  
+  
+
+
+    
+
 .page-flight-front
   main
     hr
       display: none
-    
-    
+
+        
+//sidebar  
+.group-right
+  img
+    position: relative
+    top: 20px
     
 //from the wireframe styles//
 
@@ -277,11 +394,6 @@ div.panel.callout
 .left-main p, .left-main h4
   padding-right: 2em
 
-strong
-  font-size: $paragraph-font-size
-  font-weight: bold
-  background-color: yellow
-    
 h1
   font-family: $nimbus
   letter-spacing: 1px
@@ -306,14 +418,6 @@ h2 .page-title
   letter-spacing: 1px
   margin-top: 1.3rem
 
-.view-id-news
-  h2
-    font-family: $morepro
-    line-height: 1.2em
-    font-weight: 500
-    margin-top: $pad-2
-    margin-bottom: $pad-1
-    font-size: $h3-font-size
     
 h3
   font-family: $morepro
