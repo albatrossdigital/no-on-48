@@ -3901,7 +3901,7 @@ a {
 
 /* Default paragraph styles */
 p {
-  font-family: "ff-more-web-pro";
+  font-family: "ff-more-web-pro", 'Lucida Sans', 'Lucida Grande', 'Lucida Sans Unicode', sans-serif;
   font-weight: normal;
   font-size: 1.2rem;
   line-height: 1.6;
@@ -3991,7 +3991,7 @@ ul, ol, dl {
   line-height: 1.6;
   margin-bottom: 1.25rem;
   list-style-position: outside;
-  font-family: "ff-more-web-pro"; }
+  font-family: "ff-more-web-pro", 'Lucida Sans', 'Lucida Grande', 'Lucida Sans Unicode', sans-serif; }
 
 ul {
   margin-left: 1.1rem; }
@@ -5429,7 +5429,7 @@ th.hide-for-touch {
   th.show-for-print {
     display: table-cell !important; } }
 
-i[class^="fa"], #share42 a:before {
+i[class^="fa"] {
   display: inline-block;
   font-family: FontAwesome;
   font-style: normal;
@@ -5523,9 +5523,6 @@ i[class^="fa"] {
 
 .fa-road:before {
   content: "\f018"; }
-
-#share42 a:before {
-  content: "\f019"; }
 
 .fa-download:before {
   content: "\f019"; }
@@ -6989,7 +6986,7 @@ i[class^="fa"] {
 #main-menu-links li a {
   padding-left: 0.75rem;
   padding-right: 0.75rem;
-  font-family: "nimbus-sans-condensed";
+  font-family: "nimbus-sans-condensed", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
   font-weight: 700;
   font-size: 1.625rem;
   text-transform: uppercase;
@@ -7014,7 +7011,7 @@ i[class^="fa"] {
   background-color: #222222;
   color: #FFFFFF; }
   .l-featured .block-views-hp-slider-block h2 {
-    font-family: "nimbus-sans-condensed";
+    font-family: "nimbus-sans-condensed", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
     letter-spacing: 1px;
     padding-top: 0.5em;
     line-height: 1em;
@@ -7046,14 +7043,14 @@ div.orbit-timer {
 .footer-second li {
   display: inline;
   padding-left: 1.5rem;
-  font-family: "nimbus-sans-condensed";
+  font-family: "nimbus-sans-condensed", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
   font-weight: 400;
   color: #777777;
   text-transform: uppercase;
   letter-spacing: 1px;
   margin-bottom: 1.6rem; }
 .footer-second a {
-  font-family: "nimbus-sans-condensed";
+  font-family: "nimbus-sans-condensed", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
   font-weight: 400;
   color: #be1e2d;
   text-transform: uppercase;
@@ -7070,7 +7067,7 @@ div.orbit-timer {
 .footer, .field-name-editorial-date {
   padding-top: 1.6rem; }
   .footer p, .field-name-editorial-date p {
-    font-family: "nimbus-sans-condensed";
+    font-family: "nimbus-sans-condensed", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
     font-weight: 400;
     color: #777777;
     text-transform: uppercase;
@@ -7082,10 +7079,10 @@ div.orbit-timer {
 
 .node-issues p {
   font-size: 1.2rem;
-  font-family: "ff-more-web-pro";
+  font-family: "ff-more-web-pro", 'Lucida Sans', 'Lucida Grande', 'Lucida Sans Unicode', sans-serif;
   font-weight: normal; }
 .node-issues h2 {
-  font-family: "ff-more-web-pro";
+  font-family: "ff-more-web-pro", 'Lucida Sans', 'Lucida Grande', 'Lucida Sans Unicode', sans-serif;
   font-size: 2.25rem;
   font-weight: 500; }
 
@@ -7113,7 +7110,7 @@ div.orbit-timer {
     padding-bottom: 0.75rem; }
 
 .field-name-node-link a {
-  font-family: "nimbus-sans-condensed";
+  font-family: "nimbus-sans-condensed", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
   font-weight: 400;
   color: #be1e2d;
   text-transform: uppercase;
@@ -7144,7 +7141,7 @@ div.orbit-timer {
     margin-bottom: 1.6rem; }
 
 .view-id-news h2 {
-  font-family: "ff-more-web-pro";
+  font-family: "ff-more-web-pro", 'Lucida Sans', 'Lucida Grande', 'Lucida Sans Unicode', sans-serif;
   line-height: 1.2em;
   font-weight: 500;
   margin-top: 1.6rem;
@@ -7172,6 +7169,17 @@ p {
     letter-spacing: 1px;
     margin-top: 1.3rem;
     font-size: 2.25rem; }
+  .block-bean-stay-informed img {
+    margin-left: 4.5rem;
+    padding-right: 0; }
+
+.diptych2-first .block-bean-stay-informed img {
+  display: none; }
+.diptych2-first .medium-7 {
+  padding: 1rem;
+  margin-left: 3rem; }
+.diptych2-first .collapse {
+  width: 105%; }
 
 #share42 {
   background-color: transparent; }
@@ -7181,8 +7189,6 @@ p {
     box-shadow: 0 0 0 transparent; }
   #share42 a {
     background-image: none !important; }
-    #share42 a:before {
-      font-size: inherit; }
 
 .fill h2 {
   font-family: "nimbus-sans-condensed";
@@ -7214,7 +7220,7 @@ p {
 
 .tweet-actions {
   padding-top: 2rem;
-  font-family: "nimbus-sans-condensed";
+  font-family: "nimbus-sans-condensed", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
   font-weight: 400;
   color: #be1e2d;
   text-transform: uppercase;
@@ -7235,6 +7241,34 @@ p {
 
 .tweet-text {
   font-size: 0.9rem; }
+
+li .tweet-screenname {
+  display: none; }
+
+.block-noon48-config-twitter {
+  background-color: #efece7;
+  margin-top: 8rem;
+  margin-left: -0.5rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  width: 250px; }
+  .block-noon48-config-twitter h2 {
+    font-family: "nimbus-sans-condensed";
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-top: 1.3rem;
+    font-size: 2.25rem; }
+  .block-noon48-config-twitter li {
+    list-style-type: none;
+    padding-left: 0.75rem;
+    padding-right: 0.5rem; }
+  .block-noon48-config-twitter .tweet-divider {
+    display: none; }
+  .block-noon48-config-twitter ul {
+    margin-left: 0rem;
+    padding-top: 1rem;
+    margin-right: 0.25rem; }
 
 .block-bean-endorsers {
   background-color: #efece7;
@@ -7319,7 +7353,7 @@ div.panel.callout {
   padding-right: 2em; }
 
 h1 {
-  font-family: "nimbus-sans-condensed";
+  font-family: "nimbus-sans-condensed", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
   letter-spacing: 1px;
   padding-top: 0.5em;
   line-height: 1em;
@@ -7327,7 +7361,7 @@ h1 {
   text-transform: uppercase; }
 
 h1.subheader {
-  font-family: "nimbus-sans-condensed";
+  font-family: "nimbus-sans-condensed", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
   color: #ffffff;
   letter-spacing: 1px;
   padding-top: 0.5em;
@@ -7336,14 +7370,14 @@ h1.subheader {
   text-transform: uppercase; }
 
 h2 .page-title {
-  font-family: "nimbus-sans-condensed";
+  font-family: "nimbus-sans-condensed", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 1px;
   margin-top: 1.3rem; }
 
 h3 {
-  font-family: "ff-more-web-pro";
+  font-family: "ff-more-web-pro", 'Lucida Sans', 'Lucida Grande', 'Lucida Sans Unicode', sans-serif;
   line-height: 1.2em;
   font-weight: 500;
   margin-top: 1.6rem;
@@ -7361,7 +7395,7 @@ a {
   margin-top: 0; }
 
 h4 {
-  font-family: "ff-more-web-pro";
+  font-family: "ff-more-web-pro", 'Lucida Sans', 'Lucida Grande', 'Lucida Sans Unicode', sans-serif;
   color: #222222;
   line-height: 1.6em;
   font-weight: 400;
@@ -7369,7 +7403,7 @@ h4 {
   margin-bottom: 0.8rem; }
 
 h5 {
-  font-family: "nimbus-sans-condensed";
+  font-family: "nimbus-sans-condensed", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
   font-weight: 400;
   color: #777777;
   text-transform: uppercase;
