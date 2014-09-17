@@ -60,6 +60,15 @@
   font-weight: 900
   text-transform: uppercase
   font-size: $h1-font-size
+  
+@mixin link
+  font-family: $nimbus
+  font-weight: 400
+  color: $primary-color
+  text-transform: uppercase
+  letter-spacing: 1px
+  margin-bottom: $pad-2
+    
 
 
 //header 
@@ -205,12 +214,7 @@ div.orbit-timer
       
 .field-name-node-link 
   a
-    font-family: $nimbus
-    font-weight: 400
-    color: $primary-color
-    text-transform: uppercase
-    letter-spacing: 1px
-    margin-bottom: $pad-2
+    +link
     
       
 .field-name-field-quote
@@ -289,6 +293,54 @@ p
   display: none
   
 
+//twitter
+
+.tweet-authorphoto
+  display: none
+    
+.tweet-author
+  display: none
+
+.diptych2-middle
+  .block-noon48-config
+    background-color: $tan
+    padding: $pad-1
+    margin-top: -1rem
+    padding-bottom: $pad-4
+  
+.tweets-pulled-listing
+  margin-top: 0.3rem
+  
+.tweet-actions
+  padding-top: 2rem
+  +link
+  
+  a
+    padding-right: 0.5rem
+    padding-top: 1rem
+      
+.tweet-screenname
+  +h2-blk
+  margin-top: 0.5rem
+
+.tweet-text
+  font-size: 1rem
+  
+#widget
+  display: none
+    
+#follow-button
+  a
+    display: none
+  span
+    label
+      display: none
+  
+
+  
+  
+
+    
 
 
 //endorsers block

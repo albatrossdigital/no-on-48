@@ -7190,6 +7190,53 @@ p {
 .share42-item {
   display: none; }
 
+.tweet-authorphoto {
+  display: none; }
+
+.tweet-author {
+  display: none; }
+
+.diptych2-middle .block-noon48-config {
+  background-color: #efece7;
+  padding: 0.8rem;
+  margin-top: -1rem;
+  padding-bottom: 5rem; }
+
+.tweets-pulled-listing {
+  margin-top: 0.3rem; }
+
+.tweet-actions {
+  padding-top: 2rem;
+  font-family: "nimbus-sans-condensed";
+  font-weight: 400;
+  color: #be1e2d;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 1.6rem; }
+  .tweet-actions a {
+    padding-right: 0.5rem;
+    padding-top: 1rem; }
+
+.tweet-screenname {
+  font-family: "nimbus-sans-condensed";
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-top: 1.3rem;
+  font-size: 2.25rem;
+  margin-top: 0.5rem; }
+
+.tweet-text {
+  font-size: 1rem; }
+
+#widget {
+  display: none; }
+
+#follow-button a {
+  display: none; }
+#follow-button span label {
+  display: none; }
+
 .block-bean-endorsers {
   background-color: #efece7;
   padding: 1.6rem;
