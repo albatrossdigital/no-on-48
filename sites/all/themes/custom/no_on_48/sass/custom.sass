@@ -308,7 +308,7 @@ p
 //share
 
 #share42
-  background-color: transparent
+  background-color: $tan
   
   &:hover
     background: transparent
@@ -317,26 +317,45 @@ p
       
   a
     background-image: none !important
-    
+
+@mixin icon-layout
+  font-size: 2rem
+
 
 .share42-item:nth-child(1)
+  padding-top: 1rem
+  padding-right: 1rem
+  padding-bottom: 4rem
   a
     +icon(facebook)
+    +icon-layout
       
 .share42-item:nth-child(2)
+  padding-right: 2rem
   a
     +icon(twitter)
+    +icon-layout
+    padding-right: 2rem
       
 .share42-item:nth-child(3)
+  padding-right: 1rem
   a
     +icon(linkedin)
+    +icon-layout
 
   
 .fill
+  padding: 1rem
+
   h2
     +h2-blk
+    margin-top: -1rem
     
-
+.l-diptych2
+  height: 190
+  
+  .medium-4
+    background-color: $tan
     
   
 #share42 img 

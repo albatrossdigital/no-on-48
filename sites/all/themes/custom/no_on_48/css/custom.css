@@ -7205,7 +7205,7 @@ p {
   padding-left: 2rem; }
 
 #share42 {
-  background-color: transparent; }
+  background-color: #efece7; }
   #share42:hover {
     background: transparent;
     border: 0px solid transparent;
@@ -7213,22 +7213,45 @@ p {
   #share42 a {
     background-image: none !important; }
 
-.share42-item:nth-child(1) a:before {
-  font-size: inherit; }
+.share42-item:nth-child(1) {
+  padding-top: 1rem;
+  padding-right: 1rem;
+  padding-bottom: 4rem; }
+  .share42-item:nth-child(1) a {
+    font-size: 2rem; }
+    .share42-item:nth-child(1) a:before {
+      font-size: inherit; }
 
-.share42-item:nth-child(2) a:before {
-  font-size: inherit; }
+.share42-item:nth-child(2) {
+  padding-right: 2rem; }
+  .share42-item:nth-child(2) a {
+    font-size: 2rem;
+    padding-right: 2rem; }
+    .share42-item:nth-child(2) a:before {
+      font-size: inherit; }
 
-.share42-item:nth-child(3) a:before {
-  font-size: inherit; }
+.share42-item:nth-child(3) {
+  padding-right: 1rem; }
+  .share42-item:nth-child(3) a {
+    font-size: 2rem; }
+    .share42-item:nth-child(3) a:before {
+      font-size: inherit; }
 
-.fill h2 {
-  font-family: "nimbus-sans-condensed";
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  margin-top: 1.3rem;
-  font-size: 2.25rem; }
+.fill {
+  padding: 1rem; }
+  .fill h2 {
+    font-family: "nimbus-sans-condensed";
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-top: 1.3rem;
+    font-size: 2.25rem;
+    margin-top: -1rem; }
+
+.l-diptych2 {
+  height: 190; }
+  .l-diptych2 .medium-4 {
+    background-color: #efece7; }
 
 #share42 img {
   display: none; }
