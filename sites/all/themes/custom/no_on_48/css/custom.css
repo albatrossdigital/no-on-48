@@ -5429,7 +5429,7 @@ th.hide-for-touch {
   th.show-for-print {
     display: table-cell !important; } }
 
-i[class^="fa"] {
+i[class^="fa"], #share42 a:before {
   display: inline-block;
   font-family: FontAwesome;
   font-style: normal;
@@ -5523,6 +5523,9 @@ i[class^="fa"] {
 
 .fa-road:before {
   content: "\f018"; }
+
+#share42 a:before {
+  content: "\f019"; }
 
 .fa-download:before {
   content: "\f019"; }
@@ -7176,8 +7179,10 @@ p {
     background: transparent;
     border: 0px solid transparent;
     box-shadow: 0 0 0 transparent; }
-  #share42 a img {
-    display: none; }
+  #share42 a {
+    background-image: none !important; }
+    #share42 a:before {
+      font-size: inherit; }
 
 .fill h2 {
   font-family: "nimbus-sans-condensed";
@@ -7187,7 +7192,7 @@ p {
   margin-top: 1.3rem;
   font-size: 2.25rem; }
 
-.share42-item {
+#share42 img {
   display: none; }
 
 .tweet-authorphoto {
