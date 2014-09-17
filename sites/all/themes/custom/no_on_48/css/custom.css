@@ -5429,7 +5429,7 @@ th.hide-for-touch {
   th.show-for-print {
     display: table-cell !important; } }
 
-i[class^="fa"] {
+i[class^="fa"], .share42-item:nth-child(1) a:before, .share42-item:nth-child(2) a:before, .share42-item:nth-child(3) a:before {
   display: inline-block;
   font-family: FontAwesome;
   font-style: normal;
@@ -5884,8 +5884,14 @@ i[class^="fa"] {
 .fa-phone-square:before {
   content: "\f098"; }
 
+.share42-item:nth-child(2) a:before {
+  content: "\f099"; }
+
 .fa-twitter:before {
   content: "\f099"; }
+
+.share42-item:nth-child(1) a:before {
+  content: "\f09a"; }
 
 .fa-facebook:before {
   content: "\f09a"; }
@@ -6048,6 +6054,9 @@ i[class^="fa"] {
 
 .fa-envelope:before {
   content: "\f0e0"; }
+
+.share42-item:nth-child(3) a:before {
+  content: "\f0e1"; }
 
 .fa-linkedin:before {
   content: "\f0e1"; }
@@ -7109,13 +7118,15 @@ div.orbit-timer {
     padding-top: 0.25rem;
     padding-bottom: 0.75rem; }
 
-.field-name-node-link a {
-  font-family: "nimbus-sans-condensed", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
-  font-weight: 400;
-  color: #be1e2d;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  margin-bottom: 1.6rem; }
+.field-name-node-link {
+  padding-bottom: 1rem; }
+  .field-name-node-link a {
+    font-family: "nimbus-sans-condensed", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+    font-weight: 400;
+    color: #be1e2d;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 1.6rem; }
 
 .field-name-field-quote {
   font-family: "ff-more-web-pro";
@@ -7190,6 +7201,9 @@ p {
 .diptych2-first .collapse {
   width: 105%; }
 
+.node-webform {
+  padding-left: 2rem; }
+
 #share42 {
   background-color: transparent; }
   #share42:hover {
@@ -7198,6 +7212,15 @@ p {
     box-shadow: 0 0 0 transparent; }
   #share42 a {
     background-image: none !important; }
+
+.share42-item:nth-child(1) a:before {
+  font-size: inherit; }
+
+.share42-item:nth-child(2) a:before {
+  font-size: inherit; }
+
+.share42-item:nth-child(3) a:before {
+  font-size: inherit; }
 
 .fill h2 {
   font-family: "nimbus-sans-condensed";
