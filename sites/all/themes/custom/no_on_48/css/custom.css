@@ -7018,7 +7018,8 @@ i[class^="fa"] {
 
 .l-featured .block-views-hp-slider-block {
   background-color: #222222;
-  color: #FFFFFF; }
+  color: #FFFFFF;
+  height: 455px; }
   .l-featured .block-views-hp-slider-block h2 {
     font-family: "nimbus-sans-condensed", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
     letter-spacing: 1px;
@@ -7073,15 +7074,23 @@ div.orbit-timer {
 .footer-first p {
   font-size: 1.1rem; }
 
-.footer, .field-name-editorial-date {
-  padding-top: 1.6rem; }
-  .footer p, .field-name-editorial-date p {
-    font-family: "nimbus-sans-condensed", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
-    font-weight: 400;
-    color: #777777;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    margin-bottom: 1.6rem; }
+.footer p {
+  padding-top: 1.6rem;
+  font-family: "nimbus-sans-condensed", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  color: #777777;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 1.6rem; }
+
+.field-name-field-publication-date {
+  padding-top: 1.6rem;
+  font-family: "nimbus-sans-condensed", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  color: #777777;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 1.6rem; }
 
 .view-id-issues h2 {
   padding-top: 2rem; }

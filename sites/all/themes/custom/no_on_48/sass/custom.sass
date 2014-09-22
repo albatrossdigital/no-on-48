@@ -90,6 +90,7 @@
   .block-views-hp-slider-block
     background-color: $black
     color: $white
+    height: 455px
     
     
     h2
@@ -152,17 +153,23 @@ div.orbit-timer
   p
     font-size: 1.1rem
 
-.footer,
-.field-name-editorial-date,
-  padding-top: $pad-2 
-  p
-    font-family: $nimbus
-    font-weight: 400
-    color: #777777
-    text-transform: uppercase
-    letter-spacing: 1px
-    margin-bottom: $pad-2
+@mixin date-style
+  padding-top: $pad-2
+  font-family: $nimbus
+  font-weight: 400
+  color: #777777
+  text-transform: uppercase
+  letter-spacing: 1px
+  margin-bottom: $pad-2
 
+      
+.footer
+  p
+    +date-style
+    
+.field-name-field-publication-date
+  +date-style
+    
 //issues  
 .view-id-issues
   h2
