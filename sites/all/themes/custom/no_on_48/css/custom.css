@@ -3901,7 +3901,7 @@ a {
 
 /* Default paragraph styles */
 p {
-  font-family: "ff-more-web-pro", 'Lucida Sans', 'Lucida Grande', 'Lucida Sans Unicode', sans-serif;
+  font-family: "ff-more-web-pro", 'Georgia', serif;
   font-weight: normal;
   font-size: 1.2rem;
   line-height: 1.6;
@@ -3991,7 +3991,7 @@ ul, ol, dl {
   line-height: 1.6;
   margin-bottom: 1.25rem;
   list-style-position: outside;
-  font-family: "ff-more-web-pro", 'Lucida Sans', 'Lucida Grande', 'Lucida Sans Unicode', sans-serif; }
+  font-family: "ff-more-web-pro", 'Georgia', serif; }
 
 ul {
   margin-left: 1.1rem; }
@@ -6995,7 +6995,7 @@ i[class^="fa"] {
 #main-menu-links li a {
   padding-left: 0.75rem;
   padding-right: 0.75rem;
-  font-family: "nimbus-sans-condensed", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+  font-family: "nimbus-sans-condensed", "Impact", Arial, sans-serif;
   font-weight: 700;
   font-size: 1.625rem;
   text-transform: uppercase;
@@ -7021,7 +7021,7 @@ i[class^="fa"] {
   color: #FFFFFF;
   height: 455px; }
   .l-featured .block-views-hp-slider-block h2 {
-    font-family: "nimbus-sans-condensed", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+    font-family: "nimbus-sans-condensed", "Impact", Arial, sans-serif;
     letter-spacing: 1px;
     padding-top: 0.5em;
     line-height: 1em;
@@ -7053,14 +7053,14 @@ div.orbit-timer {
 .footer-second li {
   display: inline;
   padding-left: 1.5rem;
-  font-family: "nimbus-sans-condensed", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+  font-family: "nimbus-sans-condensed", "Impact", Arial, sans-serif;
   font-weight: 400;
   color: #777777;
   text-transform: uppercase;
   letter-spacing: 1px;
   margin-bottom: 1.6rem; }
 .footer-second a {
-  font-family: "nimbus-sans-condensed", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+  font-family: "nimbus-sans-condensed", "Impact", Arial, sans-serif;
   font-weight: 400;
   color: #be1e2d;
   text-transform: uppercase;
@@ -7076,7 +7076,7 @@ div.orbit-timer {
 
 .footer p {
   padding-top: 1.6rem;
-  font-family: "nimbus-sans-condensed", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+  font-family: "nimbus-sans-condensed", "Impact", Arial, sans-serif;
   font-weight: 400;
   color: #777777;
   text-transform: uppercase;
@@ -7085,7 +7085,7 @@ div.orbit-timer {
 
 .field-name-field-publication-date {
   padding-top: 1.6rem;
-  font-family: "nimbus-sans-condensed", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+  font-family: "nimbus-sans-condensed", "Impact", Arial, sans-serif;
   font-weight: 400;
   color: #777777;
   text-transform: uppercase;
@@ -7097,10 +7097,10 @@ div.orbit-timer {
 
 .node-issues p {
   font-size: 1.2rem;
-  font-family: "ff-more-web-pro", 'Lucida Sans', 'Lucida Grande', 'Lucida Sans Unicode', sans-serif;
+  font-family: "ff-more-web-pro", 'Georgia', serif;
   font-weight: normal; }
 .node-issues h2 {
-  font-family: "ff-more-web-pro", 'Lucida Sans', 'Lucida Grande', 'Lucida Sans Unicode', sans-serif;
+  font-family: "ff-more-web-pro", 'Georgia', serif;
   font-size: 2.25rem;
   font-weight: 500; }
 
@@ -7114,7 +7114,7 @@ div.orbit-timer {
 .block-views-news-block-2 {
   margin-top: 3rem; }
   .block-views-news-block-2 h2 {
-    font-family: "nimbus-sans-condensed";
+    font-family: "nimbus-sans-condensed", "Impact", Arial, sans-serif;
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 1px;
@@ -7130,7 +7130,7 @@ div.orbit-timer {
 .field-name-node-link {
   padding-bottom: 1rem; }
   .field-name-node-link a {
-    font-family: "nimbus-sans-condensed", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+    font-family: "nimbus-sans-condensed", "Impact", Arial, sans-serif;
     font-weight: 400;
     color: #be1e2d;
     text-transform: uppercase;
@@ -7148,7 +7148,7 @@ div.orbit-timer {
   padding-right: 0.5rem; }
 
 .block-views-news-block h2 {
-  font-family: "nimbus-sans-condensed";
+  font-family: "nimbus-sans-condensed", "Impact", Arial, sans-serif;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -7161,7 +7161,7 @@ div.orbit-timer {
     margin-bottom: 1.6rem; }
 
 .view-id-news h2 {
-  font-family: "ff-more-web-pro", 'Lucida Sans', 'Lucida Grande', 'Lucida Sans Unicode', sans-serif;
+  font-family: "ff-more-web-pro", 'Georgia', serif;
   line-height: 1.2em;
   font-weight: 500;
   margin-top: 1.6rem;
@@ -7192,7 +7192,7 @@ p {
 .block-bean-stay-informed {
   background-color: #efece7; }
   .block-bean-stay-informed h4 {
-    font-family: "nimbus-sans-condensed";
+    font-family: "nimbus-sans-condensed", "Impact", Arial, sans-serif;
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 1px;
@@ -7249,7 +7249,7 @@ p {
 .fill {
   padding: 1rem; }
   .fill h2 {
-    font-family: "nimbus-sans-condensed";
+    font-family: "nimbus-sans-condensed", "Impact", Arial, sans-serif;
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 1px;
@@ -7284,7 +7284,7 @@ p {
 
 .tweet-actions {
   padding-top: 2rem;
-  font-family: "nimbus-sans-condensed", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+  font-family: "nimbus-sans-condensed", "Impact", Arial, sans-serif;
   font-weight: 400;
   color: #be1e2d;
   text-transform: uppercase;
@@ -7295,7 +7295,7 @@ p {
     padding-top: 1rem; }
 
 .tweet-screenname {
-  font-family: "nimbus-sans-condensed";
+  font-family: "nimbus-sans-condensed", "Impact", Arial, sans-serif;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -7314,7 +7314,7 @@ p {
   padding-right: 1rem;
   width: 250px; }
   .block-noon48-config-twitter h2 {
-    font-family: "nimbus-sans-condensed";
+    font-family: "nimbus-sans-condensed", "Impact", Arial, sans-serif;
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 1px;
@@ -7343,7 +7343,7 @@ p {
     .block-bean-endorsers table body {
       border-top: none; }
   .block-bean-endorsers h2 {
-    font-family: "nimbus-sans-condensed";
+    font-family: "nimbus-sans-condensed", "Impact", Arial, sans-serif;
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 1px;
@@ -7416,7 +7416,7 @@ div.panel.callout {
   padding-right: 2em; }
 
 h1 {
-  font-family: "nimbus-sans-condensed", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+  font-family: "nimbus-sans-condensed", "Impact", Arial, sans-serif;
   letter-spacing: 1px;
   padding-top: 0.5em;
   line-height: 1em;
@@ -7424,7 +7424,7 @@ h1 {
   text-transform: uppercase; }
 
 h1.subheader {
-  font-family: "nimbus-sans-condensed", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+  font-family: "nimbus-sans-condensed", "Impact", Arial, sans-serif;
   color: #ffffff;
   letter-spacing: 1px;
   padding-top: 0.5em;
@@ -7433,14 +7433,14 @@ h1.subheader {
   text-transform: uppercase; }
 
 h2 .page-title {
-  font-family: "nimbus-sans-condensed", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+  font-family: "nimbus-sans-condensed", "Impact", Arial, sans-serif;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 1px;
   margin-top: 1.3rem; }
 
 h3 {
-  font-family: "ff-more-web-pro", 'Lucida Sans', 'Lucida Grande', 'Lucida Sans Unicode', sans-serif;
+  font-family: "ff-more-web-pro", 'Georgia', serif;
   line-height: 1.2em;
   font-weight: 500;
   margin-top: 1.6rem;
@@ -7458,7 +7458,7 @@ a {
   margin-top: 0; }
 
 h4 {
-  font-family: "ff-more-web-pro", 'Lucida Sans', 'Lucida Grande', 'Lucida Sans Unicode', sans-serif;
+  font-family: "ff-more-web-pro", 'Georgia', serif;
   color: #222222;
   line-height: 1.6em;
   font-weight: 400;
@@ -7466,7 +7466,7 @@ h4 {
   margin-bottom: 0.8rem; }
 
 h5 {
-  font-family: "nimbus-sans-condensed", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+  font-family: "nimbus-sans-condensed", "Impact", Arial, sans-serif;
   font-weight: 400;
   color: #777777;
   text-transform: uppercase;
@@ -7478,3 +7478,11 @@ h6 {
   font-weight: bold;
   color: #333333;
   padding-bottom: 1rem; }
+
+h1, h2, h3, h4, h5, h6, p, .field-name-body, .field-name-field-date, a, .views-field-name, label {
+  opacity: 0;
+  -webkit-transition: opacity 0.25s ease-in-out;
+  -moz-transition: opacity 0.25s ease-in-out;
+  transition: opacity 0.25s ease-in-out; }
+  .wf-active h1, .wf-active h2, .wf-active h3, .wf-active h4, .wf-active h5, .wf-active h6, .wf-active p, .wf-active .field-name-body, .wf-active .field-name-field-date, .wf-active a, .wf-active .views-field-name, .wf-active label {
+    opacity: 1; }
