@@ -7014,7 +7014,9 @@ i[class^="fa"] {
   display: none; }
 
 #main-menu-links {
-  margin-top: -1.5rem; }
+  margin-top: -1.5rem;
+  height: 135px;
+  overflow: hidden; }
 
 .l-featured .block-views-hp-slider-block {
   background-color: #222222;
