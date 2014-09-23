@@ -7021,7 +7021,7 @@ i[class^="fa"] {
 .l-featured .block-views-hp-slider-block {
   background-color: #222222;
   color: #FFFFFF;
-  height: 455px; }
+  height: 457px; }
   .l-featured .block-views-hp-slider-block h2 {
     font-family: "nimbus-sans-condensed", "Impact", Arial, sans-serif;
     letter-spacing: 1px;
@@ -7276,8 +7276,8 @@ p {
 .diptych2-middle .block-noon48-config {
   background-color: #efece7;
   padding: 0.8rem;
-  margin-top: -0.05rem;
-  padding-bottom: 5rem; }
+  height: 265px;
+  overflow: hidden; }
 .diptych2-middle hr {
   display: none; }
 
