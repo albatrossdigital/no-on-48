@@ -35,14 +35,14 @@ function noon48_config_block_view($delta = '') {
     case 'twitter':
       //$block['subject'] = t('Syndicate');
       $block['content'] = array(
-        '#markup' => twitter_pull_render('@albatrossdigi', $title = FALSE, $num_items = 6, $themekey = NULL),
+        '#markup' => twitter_pull_render('@No_On_Prop48', $title = FALSE, $num_items = 6, $themekey = NULL),
       );
       break;
 
     case 'twitter2':
       //$block['subject'] = t('Syndicate');
       $block['content'] = array(
-        '#markup' => twitter_pull_render('@albatrossdigi', $title = FALSE, $num_items = 1, $themekey = NULL),
+        '#markup' => twitter_pull_render('@No_On_Prop48', $title = FALSE, $num_items = 1, $themekey = NULL),
       );
       break;
 
